@@ -75,6 +75,7 @@ header{
     margin-bottom: 50px;
     position: relative;
 }
+
 nav{
     position: fixed;
     top: 0;
@@ -89,7 +90,6 @@ nav{
 nav > ul{
     width: 100%;
     display: flex;
-    margin: 0 50px;
     justify-content: space-between;
     align-items: center;
 }
