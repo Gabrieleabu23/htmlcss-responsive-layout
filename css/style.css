@@ -8,8 +8,13 @@ li{
     list-style-type: none;
 }
 a{
+    display: inline-block;
     text-decoration: none;
     color: green;
+    margin: 30px 0px;
+}
+.underline{
+    text-decoration: underline;
 }
 .left > *{
     text-align: left;
@@ -39,6 +44,9 @@ a{
 .purple_text{
     color: #9792e4;
 }
+#subscription .purple_text{
+    color: #cbc9f1;
+}
 .purple_col{
     background-color: #9792e4;
     padding-bottom: 50px;
@@ -50,26 +58,37 @@ a{
 .white_text{
     color: white;
 }
-.strategic_planning{
+/* SUBSCRIPTION SECTION */
+#yellow_text{
+    font-size: 80px;
+    color: #fdc15f;
+    font-weight: bold;
+}
+.strategic_planning,
+#benefits,
+#subscription{
     background-color:#9792e4 ;
 }
 /* HEADER */
 header{
-    background-color: #0084fd;
     margin-bottom: 50px;
+    position: relative;
 }
 nav{
-    width: 80%;
-    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    background-color: #0084fd;
+    z-index: 500;
+    width: 100%;
     display: flex;
     align-items: center;
-    /* DEBUG */
     height: 70px;
 }
 
 nav > ul{
     width: 100%;
     display: flex;
+    margin: 0 50px;
     justify-content: space-between;
     align-items: center;
 }
@@ -79,6 +98,9 @@ nav > ul{
 }
 /* MAIN */
 
+main{
+    padding-top: 50px;
+}
 .container{
     max-width: 80%;
     margin: 0 auto;
@@ -102,6 +124,9 @@ nav > ul{
 }
 .radius_col{
     border-radius: 30px;
+}
+#benefits .radius_col{
+    border-radius: 20px;
 }
 .radius_col.white_col,
 .radius_col.purple_col{
@@ -137,6 +162,7 @@ h4{
 .lett_space{
     letter-spacing: 3px ;
 }
+
 #italic{
     font-size: 20px;
     line-height: 30px;
@@ -168,15 +194,76 @@ h4{
     background-color: red;
     padding: 10px 60px;
 }
+#about_us .button{
+    padding: 10px 20px;
+}
 .button_planning{
     padding: 15px 20px;
 }
-span.button{
-    display: inline-block;
-    margin-bottom: 40px;
-}
+
 #title{
     font-size: 35px;
+}
+#benefits  h2{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0px;
+}
+#benefits h5{
+    font-size: 25px;
+    padding: 10px 0px;
+}
+.number{
+    display: inline-block;
+    font-size: 50px;
+    padding: 30px 0px 10px;
+}
+#benefits p{
+    font-size: 17px;
+    line-height: 25px;
+    padding: 20px 0px;
+}
+#about_us h2{
+    font-size: 40px;
+}
+#about_us .content{
+    width: 100%;
+}
+#about_us .content p{
+    padding-top: 30px;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: lighter;
+}
+#subscription h3{
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 50px 0px 10px;
+}
+#subscription h2{
+    font-size: 40px;
+}
+#subscription p{
+    font-size: 20px;
+    margin-top: 50px;
+}
+#subscription p:last-child{
+    font-size: 15px;
+    padding-bottom: 50px;
+}
+/* FOOTER */
+footer{
+    background-color: black;
+}
+footer>*{
+    color: white;
+    text-align: center;
+}
+footer p{
+    padding: 50px 0px;
+}
+footer a{
+    margin: 0;
 }
 
 /* 
@@ -184,8 +271,12 @@ span.button{
 */
 
 @media all and (min-width:768px){
-    #demo .container{
-        max-width: 100%;
+    nav{
+        padding: 0px 10px;
+    }
+    #demo .container,
+    #benefits .container{
+        max-width: 90%;
     }
     #big_col .content{
         width: 100%;
@@ -213,7 +304,8 @@ span.button{
     #demo #big_col{
         width: calc((100%/3) *2);
     }
-    .strategic_planning .container{
+    .strategic_planning .container,
+    .testimonials .container{
         max-width: 90%;
     }
     .strategic_planning .content{
@@ -232,23 +324,43 @@ span.button{
     .image img{
         margin: 0px;
     }
-    .text{
+    /* .text{
         padding: 0px 0px 20px 40px;
         text-align: left;
-    }
+    } */
     #virgolette_div p{
         font-size: 18px;
     }
     .text .lett_space{
         letter-spacing: 2px;
     }
+
+    #benefits .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #benefits .col{
+        width: calc(100%/2);
+        padding:20px;
+    }
+    #benefits .text{
+        /* padding: 0px 20px; */
+    }
+    #benefits p{
+        font-size: 15px;
+        line-height: 30px;
+    }
 }
 @media all and (min-width:1200px){
-    #demo .container{
+    #demo .container,
+    #benefits .container{
         max-width: 80%;
     }
     .strategic_planning .container{
         max-width: 60%;
+    }
+    nav > ul{
+        margin: 0px 130px;
     }
     #big_col .content{
         width: 100%;
@@ -289,13 +401,20 @@ span.button{
         width: 50%;
         margin: 0 auto;
     }
-    .content .image{
+    .strategic_planning.content .image{
         padding-top: 30px;
         height: 80%;
     }
-    .content .text{
+    .strategic_planning.content .text{
         height: 20%;
         padding: 0px 20px;
+    }
+    #benefits .col{
+        width: calc(100%/3);
+    }
+    #benefits p{
+        font-size: 13px;
+        line-height: 25px;
     }
     
 }
