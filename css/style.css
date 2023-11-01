@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'PT Sans', sans-serif;
+    color: black;
 }
 li{
     list-style-type: none;
@@ -10,7 +11,6 @@ li{
 a{
     display: inline-block;
     text-decoration: none;
-    color: green;
     margin: 30px 0px;
 }
 .underline{
@@ -69,6 +69,7 @@ a{
 #subscription{
     background-color:#9792e4 ;
 }
+
 /* HEADER */
 header{
     margin-bottom: 50px;
@@ -191,8 +192,14 @@ h4{
 }
 .button{
     border: none;
-    background-color: red;
+    /* background-color: red; */
     padding: 10px 60px;
+}
+.blue_button{
+    background-color: #0084fd;   
+}
+.purple_button{
+    background-color: #9792e4;
 }
 #about_us .button{
     padding: 10px 20px;
@@ -201,8 +208,14 @@ h4{
     padding: 15px 20px;
 }
 
+.text{
+    padding: 0px 20px;
+}
 #title{
     font-size: 35px;
+}
+#benefits a{
+    color: white;
 }
 #benefits  h2{
     text-align: center;
@@ -255,11 +268,11 @@ h4{
 footer{
     background-color: black;
 }
-footer>*{
-    color: white;
+footer{
     text-align: center;
 }
 footer p{
+    color: white;
     padding: 50px 0px;
 }
 footer a{
