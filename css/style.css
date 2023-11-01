@@ -41,6 +41,7 @@ a{
 }
 .purple_col{
     background-color: #9792e4;
+    padding-bottom: 50px;
 }
 .white_col{
     background-color: white;
@@ -112,6 +113,9 @@ nav > ul{
     margin-bottom: -5px;
 }
 /* PERSONALIZZAZIONI CLASSI MAIN */
+h4{
+    font-size: 20px;
+}
 .col .content h2{
     padding: 20px 0px;
 }
@@ -172,4 +176,46 @@ span.button{
 }
 #title{
     font-size: 35px;
+}
+
+/* 
+    Tablet Version
+*/
+
+@media all and (min-width:768px){
+    .container{
+        max-width: 90%;
+    }
+    #demo .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #demo .col{
+        width: calc(100%/3);
+        display: flex;
+        align-items: stretch;
+        padding: 20px;
+    }
+    #demo #big_col{
+        width: calc((100%/3) *2);
+    }
+    .purple_col .content{
+        display: flex;
+        align-items: center;
+        padding: 30px 0px;
+        width: 90%;
+    }
+    .image img{
+        margin: 0px;
+    }
+    .text{
+        padding: 0px 0px 20px 40px;
+        text-align: left;
+    }
+    #virgolette_div p{
+        font-size: 18px;
+    }
+    .text .lett_space{
+        letter-spacing: 2px;
+    }
 }
