@@ -288,6 +288,13 @@ h4{
     font-size: 15px;
     padding-bottom: 50px;
 }
+#subscription a.purple_text{
+    color: #9792e4;
+}
+#subscription a.button{
+    padding: 20px 100px;
+    font-size: 18px;
+}
 /* FOOTER */
 footer{
     background-color: black;
@@ -429,6 +436,10 @@ footer a{
     #about_us a{
         margin-top: 0px;
     }
+    #subscription a.button{
+        padding: 30px 100px;
+        font-size: 20px;
+    }
 }
 @media all and (min-width:1200px){
     #demo .container,
@@ -534,6 +545,9 @@ footer a{
     #about_us .content h2{
         font-size: 36px;
     }
-    
+    #subscription a.button{
+        padding: 40px 100px;
+        font-size: 25px;
+    }
     
 }
