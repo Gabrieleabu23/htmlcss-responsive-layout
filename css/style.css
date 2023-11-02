@@ -13,6 +13,9 @@ a{
     text-decoration: none;
     margin: 30px 0px;
 }
+nav a{
+    display: inline;
+}
 .underline{
     text-decoration: underline;
 }
@@ -72,27 +75,29 @@ a{
 
 /* HEADER */
 header{
-    margin-bottom: 50px;
-    position: relative;
-}
-
-nav{
-    position: fixed;
-    top: 0;
-    background-color: #0084fd;
-    z-index: 500;
     width: 100%;
-    display: flex;
-    align-items: center;
+    margin-bottom: 50px;
+    background-color: #0084fd;
     height: 70px;
 }
 
+nav{
+    display: flex;
+    /* border: 1px solid red; */
+    height: 100%;
+}
+
 nav > ul{
-    width: 100%;
+    width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+nav li,
+a{
+    color: white;
+}
+
 
 #menu_destkop{
     display: none;
@@ -173,15 +178,25 @@ h4{
 .light{
     font-weight: lighter;
 }
-.virgolette{
-    font-size: 40px;
-    padding-top: 20px;
-    vertical-align: middle;
+.virgolette {
+    font-size:19px;
+    line-height: 33px;
+    margin-bottom: 30px;
 }
-#virgolette_div p{
-    padding: 10px 0px;
-    font-size: 22px;
-    line-height: 30px;
+.virgolette:before {
+    content: "\201C";
+    position: relative;
+    top: 30px;
+    padding-right:4px;
+    font-size: 4rem;
+}
+.virgolette:after {
+    content: "\201D";
+    line-height: 1px;
+    font-size: 4rem;
+    position: relative;
+    top: 30px;
+    padding-left:4px;
 }
 .radius_img img{
     margin-top: 40px;
@@ -284,12 +299,13 @@ footer a{
 */
 
 @media all and (min-width:768px){
-    nav{
-        padding: 0px 10px;
-    }
     #demo .container,
-    #benefits .container{
+    #benefits .container,
+    nav.container{
         max-width: 90%;
+    }
+    nav.container{
+        padding: 0px 20px;
     }
     #big_col .content{
         width: 100%;
@@ -328,9 +344,13 @@ footer a{
     .strategic_planning p.white_text{
         font-size: 15px;
     }
+    .purple_col{
+        padding: 0;
+    }
     .purple_col .content{
         display: flex;
         align-items: center;
+        margin: 0 20px;
         padding: 30px 0px;
         width: 90%;
     }
@@ -341,8 +361,19 @@ footer a{
         padding: 0px 0px 20px 40px;
         text-align: left;
     } */
-    #virgolette_div p{
-        font-size: 18px;
+    
+    .testimonials .content{
+        width: 100%;
+    }
+    .virgolette {
+        font-size: 17px ;
+    }
+    .testimonials .text{
+        width: 70%;
+        padding-right:40px ;
+    }
+    .testimonials .image{
+        width: 30%;
     }
     .text .lett_space{
         letter-spacing: 2px;
@@ -366,15 +397,23 @@ footer a{
 }
 @media all and (min-width:1200px){
     #demo .container,
-    #benefits .container{
+    #benefits .container,
+    nav.container{
         max-width: 80%;
     }
     .strategic_planning .container{
         max-width: 60%;
     }
-    nav > ul{
-        margin: 0px 130px;
+    #hamburger_menu{
+        display: none;
     }
+    #menu_destkop{
+        display: flex;
+    }
+    #menu_destkop ul{
+        display: flex;
+        gap: 20px;
+     }
     #big_col .content{
         width: 100%;
         height: 100%;
@@ -389,6 +428,7 @@ footer a{
     }
     .strategic_planning .row{
         display: flex;
+        align-items: flex-end;
 
     }
     .strategic_planning .col{
@@ -398,7 +438,6 @@ footer a{
     .strategic_planning .content{
         display: flex;
         flex-direction: column;
-        justify-self: stretch;
         height: 100%;
         margin: 0;
     }
